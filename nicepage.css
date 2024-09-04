@@ -44052,13 +44052,20 @@ a.u-link.u-text-hover-grey-90:hover {
 .u-header .u-nav-1 {
   font-weight: 700;
   font-family: Mallanna;
-  font-size: 1rem;
+  font-size: 1.125rem;
   text-transform: uppercase;
   letter-spacing: normal;
 }
 
+.u-header .u-sidenav-1 {
+  width: 178px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .u-header .u-nav-2 {
   font-size: 1.25rem;
+  font-weight: 400;
 }
 
 .u-header .u-text-1 {
@@ -44097,7 +44104,6 @@ a.u-link.u-text-hover-grey-90:hover {
   .u-header .u-menu-1 {
     width: auto;
     margin-top: 171px;
-    margin-right: 0;
   }
 
   .u-header .u-text-1 {
@@ -44116,7 +44122,10 @@ a.u-link.u-text-hover-grey-90:hover {
 
   .u-header .u-menu-1 {
     margin-top: 108px;
-    margin-right: 0;
+  }
+
+  .u-header .u-nav-2 {
+    font-weight: 700;
   }
 
   .u-header .u-text-1 {
@@ -44131,13 +44140,26 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 }
 @media (max-width: 767px) {
+  .u-header .u-sheet-1 {
+    min-height: 184px;
+  }
+
+  .u-header .u-menu-1 {
+    margin-top: 136px;
+  }
+
+  .u-header .u-nav-2 {
+    font-size: 1.5rem;
+  }
+
   .u-header .u-text-1 {
-    margin-top: -32px;
-    margin-right: 395px;
+    margin-top: -59px;
+    margin-right: 150px;
   }
 
   .u-header .u-text-2 {
     font-size: 1rem;
+    margin-bottom: 4px;
   }
 }
 @media (max-width: 575px) {
