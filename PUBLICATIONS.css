@@ -3,14 +3,14 @@
 }
 
 .u-section-1 .u-sheet-1 {
-  min-height: 1714px;
+  min-height: 1754px;
 }
 
 .u-section-1 .u-text-1 {
   font-size: 1.875rem;
   font-weight: 700;
   font-family: Mallanna;
-  margin: 30px 1085px 0 51px;
+  margin: 70px 1085px 0 51px;
 }
 
 .u-section-1 .u-text-2 {
@@ -336,12 +336,12 @@
 
 @media (max-width: 1399px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 1632px;
+    min-height: 1642px;
   }
 
   .u-section-1 .u-text-1 {
     width: auto;
-    margin-top: 16px;
+    margin-top: 26px;
     margin-right: 956px;
     margin-left: 0;
   }
@@ -583,7 +583,7 @@
 
   .u-section-1 .u-repeater-1 {
     grid-template-columns: 100%;
-    min-height: 243px;
+    min-height: 224px;
   }
 
   .u-section-1 .u-text-29 {
@@ -597,10 +597,11 @@
 
 @media (max-width: 1199px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 1891px;
+    min-height: 1936px;
   }
 
   .u-section-1 .u-text-1 {
+    margin-top: 71px;
     margin-right: 756px;
   }
 
@@ -1077,17 +1078,17 @@
   }
 
   .u-section-1 .u-repeater-1 {
-    min-height: 354px;
+    min-height: 336px;
   }
 
   .u-section-1 .u-container-layout-10 {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
   .u-section-1 .u-container-layout-11 {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }
 
@@ -1338,6 +1339,10 @@
     width: auto;
   }
 
+  .u-section-1 .u-repeater-1 {
+    min-height: 322px;
+  }
+
   .u-section-1 .u-container-layout-10 {
     padding-left: 0;
     padding-right: 0;
@@ -1361,11 +1366,11 @@
 
 @media (max-width: 575px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 2753px;
+    min-height: 2785px;
   }
 
   .u-section-1 .u-text-1 {
-    margin-top: 15px;
+    margin-top: 41px;
     margin-right: 176px;
   }
 
@@ -1589,16 +1594,32 @@
   }
 
   .u-section-1 .u-list-1 {
-    height: auto;
-    min-height: 230px;
-    margin-top: 10px;
+    margin-top: 22px;
     width: auto;
     margin-right: initial;
     margin-left: initial;
   }
 
   .u-section-1 .u-repeater-1 {
-    min-height: 450px;
+    min-height: 412px;
+  }
+
+  .u-section-1 .u-container-layout-10 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .u-section-1 .u-text-29 {
+    margin-top: 0;
+  }
+
+  .u-section-1 .u-container-layout-11 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .u-section-1 .u-text-30 {
+    margin-top: 0;
   }
 }
 
