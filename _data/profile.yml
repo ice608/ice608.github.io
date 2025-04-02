@@ -25,7 +25,7 @@ short_bio: >-
    onmouseover="this.style.color='#76aad9';" 
    onmouseout="this.style.color='inherit';">Dr. Xulong Tang</a>. I received my B.E. and M.S. degree from the College of Intelligence and Computing, Tianjin University in 2017 and 2020, respectively. </p>
   <p>
-    My research interests lie broadly in <span style="font-weight: 700;" >advanced computer architectures</span>, <span class=style="font-weight: 700;">high-performance computing systems</span>, and <span class=style="font-weight: 700;">emerging parallel applications</span>, with a specific focus on GPU ecosystem from architecture to application. My work aims to design architectures and system features for next-generation GPU systems, enabling and supporting emerging large-scale applications on both single- and multi-GPU platforms. I am also workig on system-level optimizations for <span style="font-weight: 700;">large language models serving</span>.
+    My research interests lie broadly in <span style="font-weight: bold;" >advanced computer architectures</span>, <span style="font-weight: bold;">high-performance computing systems</span>, and <span style="font-weight: bold;">emerging parallel applications</span>, with a specific focus on GPU ecosystem from architecture to application. My work aims to design architectures and system features for next-generation GPU systems, enabling and supporting emerging large-scale applications on both single- and multi-GPU platforms. I am also workig on system-level optimizations for <span style="font-weight: 700;">large language models serving</span>.
   </p>
 
   <div class="bg-light p-3 mt-4" style="color: #db535a;">
@@ -38,28 +38,3 @@ portrait_url: /assets/images/photos/portrait.jpg
 portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
-# education:
-# - name: Massachusetts Institute of Technology
-#   logo: /assets/images/badges/MIT_Social_circle.png
-#   position: >- 
-#     Department of Electrical Engineering and Computer Science <br/>
-#     Ph.D. Student
-#   date: Sep. 2024 - present
-# - name: Peking University
-#   logo: /assets/images/badges/PKU_red.png
-#   position: B.S. in Computer Science
-#   date: Sep. 2019 - Jul. 2021
-
-# # experience:
-# # - name: Peking University
-# #   logo: /assets/images/badges/PKU_red.png
-# #   position: Research Intern
-# #   date: Sep. 2019 - Jul. 2021
-
-# awards:
-# - name: Award Name 2
-#   date: 2024
-# - name: Award Name 1 
-#   date: 2021
-# - name: A quick brown fox jumps over the lazy dog and runs away award
-#   date: 2021
