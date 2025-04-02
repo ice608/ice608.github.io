@@ -1,16 +1,17 @@
-<div class="news-block">
+<!-- 假设你的 news 已经按日期倒序排序 -->
+<div class="my-3 bg-white p-3 rounded shadow-sm">
   {% assign news_sorted = site.news | sort: "date" | reverse %}
   {% for item in news_sorted %}
-  <div class="news-item d-flex py-2 border-bottom">
-    <!-- 左侧日期部分，显示年份和月份 -->
-    <div class="news-date text-muted mr-3" style="min-width:80px; text-align:right;">
-      <div>{{ item.date | date: "%Y" }}</div>
-      <div>{{ item.date | date: "%b" }}</div>
+    <!-- 每条新闻一个容器，使用 margin-bottom 间隔 -->
+    <div class="d-flex mb-2">
+      <!-- 年月在一行显示 -->
+      <div class="text-muted mr-3">
+        {{ item.date | date: "%Y %b" }}
+      </div>
+      <!-- 新闻标题或内容 -->
+      <div>
+        {{ item.title }}
+      </div>
     </div>
-    <!-- 右侧内容部分 -->
-    <div class="news-content">
-      {{ item.title }}
-    </div>
-  </div>
   {% endfor %}
 </div>
