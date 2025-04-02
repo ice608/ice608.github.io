@@ -1,10 +1,10 @@
-primary_name: "Bingyao Li 「李冰瑶」"
-secondary_name: "Assistant Professor in UC Riverside"
-navbar_name: "Hompage"
+# primary_name: "Bingyao Li 「李冰瑶」"
+#secondary_name: "Assistant Professor in UC Riverside"
+navbar_name: "Bingyao Li 「李冰瑶」\\ Assistant Professor in UC Riverside"
 
-positions:
-- logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
-  name: Assistant Professor
+# positions:
+# - logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
+#   name: Assistant Professor
 
 
 email: "bil35@pitt.edu"
