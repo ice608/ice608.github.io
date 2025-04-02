@@ -28,7 +28,7 @@ short_bio: >-
     My research interests lie broadly in <span style="font-weight: 700;" class="u-text-grey-80">advanced computer architectures</span>, <span class="u-text-grey-80" style="font-weight: 700;">high-performance computing systems</span>, and <span class="u-text-grey-80" style="font-weight: 700;">emerging parallel applications</span>, with a specific focus on GPU ecosystem from architecture to application. My work aims to design architectures and system features for next-generation GPU systems, enabling and supporting emerging large-scale applications on both single- and multi-GPU platforms. I am also workig on system-level optimizations for <span style="font-weight: 700;">large language models serving</span>.
   </p>
 
-  <div class="bg-light p-3 mt-4">
+  <div class="bg-light p-3 mt-4" style="color: #db535a;">
     <em>I will be joining the <a href="https://www1.cs.ucr.edu/" style="font-weight: bold; color: inherit;" 
    onmouseover="this.style.color='blue';" 
    onmouseout="this.style.color='inherit';">Computer Science and Engineering Department of UC Riverside</a> as a tenure-track assistant professor in Fall 2025. I am looking for multiple self-motivated PhD students to start in Winter/Spring/Fall 2026.</em>
