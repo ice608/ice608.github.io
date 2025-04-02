@@ -1,17 +1,18 @@
-<!-- 假设你的 news 已经按日期倒序排序 -->
-<div class="my-3 bg-white p-3 rounded shadow-sm">
+<div class="news-list">
+  <!-- 将 news 按日期降序排列 -->
   {% assign news_sorted = site.news | sort: "date" | reverse %}
-  {% for item in news_sorted %}
-    <!-- 每条新闻一个容器，使用 margin-bottom 间隔 -->
-    <div class="d-flex mb-2">
-      <!-- 年月在一行显示 -->
-      <div class="text-muted mr-3">
-        {{ item.date | date: "%Y %b" }}
-      </div>
-      <!-- 新闻标题或内容 -->
-      <div>
+
+  <!-- 使用无序列表来承载每条 news -->
+  <ul style="list-style: none; margin: 0; padding: 0;">
+    {% for item in news_sorted %}
+      <li style="margin-bottom: 10px;">
+        <!-- 日期（MM/YYYY） -->
+        <span style="display: inline-block; width: 70px; font-weight: 500;">
+          {{ item.date | date: "%m/%Y" }}
+        </span>
+        <!-- 标题或正文 -->
         {{ item.title }}
-      </div>
-    </div>
-  {% endfor %}
+      </li>
+    {% endfor %}
+  </ul>
 </div>
