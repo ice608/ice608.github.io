@@ -1,13 +1,13 @@
 {% assign item = include.item %}
 <div class="row no-gutters {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray">
   <!-- 左侧：显示 publication 的动态文本 -->
-  <div class="col-1 p-3">
+  <div class="col-1.7 p-3">
     <div class="w-100 h-100 d-flex align-items-center justify-content-center" style="min-height: 80px;">
       {{ item.cover_text }}
     </div>
   </div>
   <!-- 右侧：显示其他详细信息 -->
-  <div class="col-11 p-3">
+  <div class="col-10.3 p-3">
     <h5 class="mt-0 mb-1 font-weight-normal">{{ item.title }}</h5>
     <p class="mt-0 mb-0 small">
       {% include widgets/author_list.html authors=item.authors %}
