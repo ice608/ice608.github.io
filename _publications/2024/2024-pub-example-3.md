@@ -1,6 +1,6 @@
 ---
 title:          "Convallis a cras semper auctor neque vitae rutrum quisque non tellus orci ac"
-cover_text:     "MICRO 2024"
+cover_text:     "<strong>MICRO 2024</strong>"
 date:           2024-05-12 00:01:00 +0800
 selected:       true
 pub:            "International Conference on Machine Learning (ICML)"
