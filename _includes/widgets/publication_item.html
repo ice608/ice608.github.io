@@ -5,10 +5,9 @@
   }
 </style>
 {% assign item = include.item %}
-<div class="container" style="padding-left: 20px; padding-right: 20px;">
-  <div class="row no-gutters">
+<div class="row no-gutters {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray">
   <!-- 左侧：显示 publication 的动态文本 -->
-  <div class="col-1-5 p-3">
+  <div class="col-1-5 p-3" style="padding-left: 30px;">
     <div class="w-100 h-100 d-flex align-items-center justify-content-center" style="min-height: 80px;">
       {{ item.cover_text }}
     </div>
@@ -33,5 +32,4 @@
       {% endfor %}
     </p>
   </div>
-</div>
 </div>
