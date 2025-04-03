@@ -4,7 +4,7 @@
   {% assign news_sorted = site.news | sort: "date" | reverse %}
   <div class="px-3 pb-3">
     <!-- 使用无序列表来承载每条 news -->
-    <ul style="list-style: none; margin: 0 0 0 30px; padding: 0;">
+    <ul style="list-style: none; margin: 0 10px 0 30px; padding: 0;">
       {% for item in news_sorted %}
         <li style="margin-bottom: -3px; padding: 5px 0; display: flex;">
           <!-- 日期（MM/YYYY） -->
@@ -12,7 +12,7 @@
             {{ item.date | date: "%m/%Y" }}
           </span>
           <!-- 标题或正文 -->
-          <span style="flex: 1; font-size: 0.875rem;">
+          <span style="flex: 1; font-size: 0.92rem;">
             {{ item.title }}
           </span>
         </li>
