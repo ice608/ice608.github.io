@@ -3,6 +3,7 @@
   .publication-container {
     display: flex;
     align-items: center;
+    gap: 1rem; /* 设置左右间隔为 1rem，根据需要调整 */
     border-bottom: 1px solid #ccc; /* 模拟 border-gray */
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -25,7 +26,7 @@
   /* 右侧区域占据剩余空间 */
   .publication-right {
     flex: 1;
-    padding: 1rem;
+/*    padding: 1rem;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,11 +37,6 @@
       margin-left: 10px;
       max-width: 80px;  /* 固定最大宽度，根据需要调整数值 */
     }
-  }
-    /* 去掉标题、段落等默认外边距，避免顶端出现空白 */
-  .publication-right h5,
-  .publication-right p {
-    margin: 0.25rem 0; /* 也可设为 margin: 0; 根据需要微调 */
   }
 </style>
 
