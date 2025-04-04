@@ -1,101 +1,74 @@
 <style>
-  /* 整体卡片 */
-  .publications-card {
+  /* Flexbox 容器 */
+  .publication-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* 设置左右间隔为 1rem，根据需要调整 */
+    border-bottom: 1px solid #ccc; /* 模拟 border-gray */
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     border-radius: 0.25rem;
     margin: 1rem 0;
-    overflow: hidden;
+    padding-bottom: 1rem;           /* 增加底部内边距 */
   }
-  /* 卡片头部 */
-  .publications-header {
-    border-bottom: 1px solid #ccc;
-    padding: 1rem;
-    font-size: 1.25rem;
-  }
-  .publications-header a {
-    color: #76aad9;
-    text-decoration: none;
-  }
-  /* 整体列表容器 */
-  .publications-list {
-    display: grid;
-    grid-auto-rows: auto;
-  }
-  /* 单个 publication 项目，采用 Grid 布局：
-     左侧固定宽度，右侧自适应 */
-  .publication-item {
-    display: grid;
-    grid-template-columns: 100px 1fr; /* 桌面端：左侧100px */
-    gap: 2rem;
-    align-items: center;
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;
-  }
-  /* 去掉最后一项的边框 */
-  .publication-item:last-child {
-    border-bottom: none;
-  }
-  /* 小屏幕下调整左侧宽度和间隔 */
-  @media (max-width: 767.98px) {
-    .publication-item {
-      grid-template-columns: 80px 1fr; /* 小屏下左侧80px */
-      gap: 1rem;
-    }
-  }
-  /* 内部右侧标题、段落的外边距归零，便于统一对齐 */
-  .publication-right h5,
-  .publication-right p {
-    margin: 0.25rem 0;
-  }
-  /* 左侧内容居中 */
+  /* 左侧区域，自适应内容宽度，允许换行 */
   .publication-left {
+    margin-left: 30px;
+/*    padding: 1rem;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    width: 100px;  
     text-align: center;
-    word-wrap: break-word;
+    flex-wrap: wrap;
+    white-space: normal;
+    align-content: center;
+  }
+  /* 右侧区域占据剩余空间 */
+  .publication-right {
+    flex: 1;
+/*    padding: 1rem;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* 小屏幕下，调整左侧外边距，并限制宽度强制换行 */
+  @media (max-width: 767.98px) {
+    .publication-left {
+      margin-left: 10px;
+      max-width: 80px;  /* 固定最大宽度，根据需要调整数值 */
+    }
+    .publication-container {
+    gap: 1rem; /* 设置左右间隔为 1rem，根据需要调整 */
+  }
   }
 </style>
 
-<div class="publications-card">
-  <!-- 卡片头部，只出现一次 -->
-  <div class="publications-header">
-    {% if include.title %}
-      {{ include.title }}
-    {% else %}
-      <i class="fas fa-star"></i> Selected Recent Publications
-    {% endif %}
-    <a href="{{ 'publications' | relative_url }}">
-      (view all <i class="fas fa-angle-double-right"></i>)
-    </a>
+{% assign item = include.item %}
+<div class="publication-container">
+  <!-- 左侧：显示 publication 的动态文本 -->
+  <div class="publication-left" style="font-size: 0.98rem;">
+    {{ item.cover_text }}
   </div>
-  
-  <!-- 列表部分，包含所有 publication 项 -->
-  <div class="publications-list">
-    {% assign publications = include.publications %}
-    {% for item in publications limit: include.limit %}
-      <div class="publication-item">
-        <!-- 左侧区域：固定宽度 -->
-        <div class="publication-left" style="font-size: 0.98rem;">
-          {{ item.cover_text }}
-        </div>
-        <!-- 右侧区域：自适应内容 -->
-        <div class="publication-right">
-          <h5 style="font-size: 1rem;">{{ item.title }}</h5>
-          <p class="small">{{ item.authors }}</p>
-          <p class="small">
-            {{ item.pub_pre }}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}
-          </p>
-          <p class="small text-muted">{{ item.abstract }}</p>
-          <p class="small lh-125 text-muted abstract-links">
-            {% for link in item.links %}
-              {% if link[1].url %}
-                <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
-              {% else %}
-                <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
-              {% endif %}
-            {% endfor %}
-          </p>
-        </div>
-      </div>
-    {% endfor %}
+  <!-- 右侧：显示其他详细信息 -->
+  <div class="publication-right">
+    <h5 class="mt-0 mb-1 font-weight-normal" style="font-size: 1rem;">{{ item.title }}</h5>
+    <p class="mt-0 mb-0 small">
+      {{item.authors %}}
+    </p>
+    <p class="mt-0 mb-0 small">
+      {{ item.pub_pre }}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}
+    </p>
+    <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
+    <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+      {% for link in item.links %}
+        {% if link[1].url %}
+          <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
+        {% else %}
+          <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
+        {% endif %}
+      {% endfor %}
+    </p>
   </div>
 </div>
