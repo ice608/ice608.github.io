@@ -36,7 +36,7 @@
   }
    /* 去掉最后一项的下边框 */
   .publication-container:last-child {
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
   }
   /* 小屏幕下，调整左侧外边距，并限制宽度强制换行 */
   @media (max-width: 767.98px) {
@@ -53,7 +53,7 @@
 {% assign item = include.item %}
 <div class="publication-container">
   <!-- 左侧：显示 publication 的动态文本 -->
-  <div class="publication-left" style="font-size: 0.98rem;">
+  <div class="publication-left" style="font-size: 0.93rem;">
     {{ item.cover_text }}
   </div>
   <!-- 右侧：显示其他详细信息 -->
