@@ -9,6 +9,4 @@ pub_date:       "2025"
 authors:
 - Yueqi Wang, <strong><u>Bingyao Li</u></strong>, Mohamed Tarek Ibn Ziad, Lieven Eeckhout, Jun Yang, Aamer Jaleel, and Xulong Tang
 
-links:
-  Paper: https://www.cell.com
 ---
