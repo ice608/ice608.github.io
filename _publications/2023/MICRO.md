@@ -1,5 +1,5 @@
 ---
-title:          "Improving Address Translation in Multi-GPUs via Sharing and Spilling aware TLB Design"
+title:          "<strong>IDYLL: Enhancing Page Translation in Multi-GPUs via Light Weight PTE Invalidations</strong>"
 cover_text:     "<strong>MICRO 2023</strong>"
 date:           2023-11-01 00:01:00 +0800
 selected:       false
