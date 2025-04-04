@@ -8,7 +8,4 @@ pub_date:       "2024"
 
 authors:
   - <strong><u>Bingyao Li</u></strong>, Yueqi Wang, Tianyu Wang, Lieven Eeckhout, Jun Yang, Aamer Jaleel, and Xulong Tang
-links:
-  Code: https://github.com/luost26/academic-homepage
-  Unsplash: https://unsplash.com/photos/sliced-in-half-pineapple--_PLJZmHZzk
 ---
