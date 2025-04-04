@@ -37,6 +37,11 @@
       max-width: 80px;  /* 固定最大宽度，根据需要调整数值 */
     }
   }
+    /* 去掉标题、段落等默认外边距，避免顶端出现空白 */
+  .publication-right h5,
+  .publication-right p {
+    margin: 0.25rem 0; /* 也可设为 margin: 0; 根据需要微调 */
+  }
 </style>
 
 {% assign item = include.item %}
@@ -47,7 +52,7 @@
   </div>
   <!-- 右侧：显示其他详细信息 -->
   <div class="publication-right">
-    <h5 class="mt-0 mb-1 font-weight-normal" style="font-size: 0.95rem;">{{ item.title }}</h5>
+    <h5 class="mt-0 mb-1 font-weight-normal" style="font-size: 1rem;">{{ item.title }}</h5>
     <p class="mt-0 mb-0 small">
       {% include widgets/author_list.html authors=item.authors %}
     </p>
