@@ -9,17 +9,17 @@
     border-radius: 0.25rem;
     margin: 1rem 0;
   }
-  /* 左侧区域，自适应内容宽度 */
+  /* 左侧区域，自适应内容宽度，允许换行 */
   .publication-left {
-    /* 给左侧区域固定左外边距 */
     margin-left: 30px;
     padding: 1rem;
-    /* 内部使用 Flexbox 居中内容 */
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 80px;
     text-align: center;
+    flex-wrap: wrap;      /* 允许内部元素换行 */
+    white-space: normal;  /* 确保文本正常换行 */
   }
   /* 右侧区域占据剩余空间 */
   .publication-right {
