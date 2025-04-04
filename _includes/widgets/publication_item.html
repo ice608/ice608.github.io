@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     padding: 1rem;             /* 给每条留点内边距 */
-    border-bottom: -1px 
+    border-bottom: 1px solid #ccc;
   }
   /* 去掉最后一条 publication 的分隔线 */
   .publication-item:last-child {
@@ -25,13 +25,13 @@
   /* 调整标题与段落外边距，以免默认 margin 过大 */
   .publication-right h5,
   .publication-right p {
-    margin: 0.6rem 0;
+    margin: 0.25rem 0;
   }
   /* 小屏幕下，如果想让左侧更窄，可加媒体查询 */
   @media (max-width: 767.98px) {
     .publication-left {
       width: 80px;
-      margin-right: 0.3rem;
+      margin-right: 0.5rem;
     }
   }
 </style>
