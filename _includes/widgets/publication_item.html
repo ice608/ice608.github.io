@@ -1,40 +1,20 @@
 <style>
-  /* 整个卡片 */
-  .publications-card {
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    border-radius: 0.25rem;
-    margin: 1rem 0;
-    overflow: hidden; /* 保证内部边框和圆角配合 */
-  }
-  /* 卡片头部 */
-  .publications-header {
-    border-bottom: 1px solid #ccc; /* 模拟 border-gray */
-    padding: 1rem;
-    font-size: 1.25rem;
-  }
-  .publications-header a {
-    color: #76aad9;
-  }
-  /* 列表容器 */
-  .publications-list {
-    /* 不设置外边距，让列表项紧密排列 */
-  }
-  /* 单个 publication 项 */
+  /* 单个 publication 项的整体容器 */
   .publication-item {
     display: flex;
     align-items: center;
-    gap: 2rem; /* 左右区域间隔 */
+    gap: 2rem; /* 左右间隔 */
     padding: 1rem 0;
-  }
-  /* 给非最后一项添加下边框 */
-  .publication-item:not(:last-child) {
     border-bottom: 1px solid #ccc;
   }
-  /* 左侧区域：固定宽度，保证右侧对齐 */
+  /* 去掉最后一项的底部边框 */
+  .publication-item:last-child {
+    border-bottom: none;
+  }
+  /* 左侧区域：固定宽度，保证右侧内容起点统一 */
   .publication-left {
-    width: 100px;               /* 固定宽度 */
-    margin-left: 30px;          /* 桌面端左边距 */
+    width: 100px;
+    margin-left: 30px;  /* 桌面端左边距 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,73 +23,53 @@
     flex-wrap: wrap;
     white-space: normal;
     align-content: center;
+    font-size: 0.98rem;
   }
-  /* 小屏幕下调整左侧外边距和宽度 */
-  @media (max-width: 767.98px) {
-    .publication-left {
-      margin-left: 10px;
-      width: 80px;            /* 根据需要调整 */
-    }
-    .publication-item {
-      gap: 1rem;
-    }
-  }
-  /* 右侧区域：占据剩余空间 */
+  /* 右侧区域：占据剩余空间，内容垂直居中 */
   .publication-right {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  /* 调整右侧标题和段落的外边距 */
+  /* 调整标题和段落的外边距 */
   .publication-right h5,
   .publication-right p {
     margin: 0.25rem 0;
   }
+  /* 小屏幕下调整 */
+  @media (max-width: 767.98px) {
+    .publication-left {
+      margin-left: 10px;
+      width: 80px;
+    }
+    .publication-item {
+      gap: 1rem;
+    }
+  }
 </style>
 
-<!-- 卡片整体容器 -->
-<div class="publications-card">
-  <!-- 卡片头部 -->
-  <h6 class="publications-header">
-    {% if include.title %}
-      {{ include.title }}
-    {% else %}
-      <i class="fas fa-star"></i> Selected Recent Publications
-    {% endif %}
-    <a href="{{ 'publications' | relative_url }}">
-      (view all <i class="fas fa-angle-double-right"></i>)
-    </a>
-  </h6>
-  
-  <!-- 卡片内部的 publication 列表 -->
-  <div class="publications-list">
-    {% assign publications = include.publications %}
-    {% for item in publications limit:include.limit %}
-      <div class="publication-item">
-        <!-- 左侧：固定区域显示动态文本 -->
-        <div class="publication-left" style="font-size: 0.98rem;">
-          {{ item.cover_text }}
-        </div>
-        <!-- 右侧：显示 publication 的详细信息 -->
-        <div class="publication-right">
-          <h5 style="font-size: 1rem;">{{ item.title }}</h5>
-          <p class="small">{{ item.authors }}</p>
-          <p class="small">
-            {{ item.pub_pre }}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}
-          </p>
-          <p class="small text-muted">{{ item.abstract }}</p>
-          <p class="small lh-125 text-muted abstract-links">
-            {% for link in item.links %}
-              {% if link[1].url %}
-                <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
-              {% else %}
-                <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
-              {% endif %}
-            {% endfor %}
-          </p>
-        </div>
-      </div>
-    {% endfor %}
+<div class="publication-item">
+  <!-- 左侧区域：显示动态文本 -->
+  <div class="publication-left">
+    {{ item.cover_text }}
+  </div>
+  <!-- 右侧区域：显示详细信息 -->
+  <div class="publication-right">
+    <h5 style="font-size: 1rem;">{{ item.title }}</h5>
+    <p class="small">{{ item.authors }}</p>
+    <p class="small">
+      {{ item.pub_pre }}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}
+    </p>
+    <p class="small text-muted">{{ item.abstract }}</p>
+    <p class="small lh-125 text-muted abstract-links">
+      {% for link in item.links %}
+        {% if link[1].url %}
+          <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
+        {% else %}
+          <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
+        {% endif %}
+      {% endfor %}
+    </p>
   </div>
 </div>
