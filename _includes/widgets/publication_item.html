@@ -18,18 +18,19 @@
     justify-content: center;
     min-height: 80px;
     text-align: center;
-    flex-wrap: wrap;      /* 允许内部元素换行 */
-    white-space: normal;  /* 确保文本正常换行 */
+    flex-wrap: wrap;
+    white-space: normal;
   }
   /* 右侧区域占据剩余空间 */
   .publication-right {
     flex: 1;
     padding: 1rem;
   }
-  /* 小屏幕下，调整左侧外边距 */
+  /* 小屏幕下，调整左侧外边距，并限制宽度强制换行 */
   @media (max-width: 767.98px) {
     .publication-left {
       margin-left: 10px;
+      max-width: 80px;  /* 固定最大宽度，根据需要调整数值 */
     }
   }
 </style>
