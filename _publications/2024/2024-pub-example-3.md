@@ -1,5 +1,5 @@
 ---
-title:          "STAR: Sub-Entry Sharing-Aware TLB for Multi-Instance GPU"
+title:          "<strong>STAR: Sub-Entry Sharing-Aware TLB for Multi-Instance GPU</strong>"
 cover_text:     "<strong>MICRO 2024</strong>"
 date:           2024-10-31 00:01:00 +0800
 selected:       true

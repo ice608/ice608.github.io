@@ -1,5 +1,5 @@
 ---
-title:          "OASIS: Object-Aware Page Management for Multi-GPU Systems"
+title:          "<strong>OASIS: Object-Aware Page Management for Multi-GPU Systems</strong>"
 cover_text:     "<strong>HPCA 2025</strong>"
 date:           2025-03-01 00:01:00 +0800
 selected:       true
